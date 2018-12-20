@@ -4,45 +4,23 @@ import BootstrapTable from 'react-bootstrap-table-next';
 import logo from './logo.svg';
 import './App.css';
 import cellEditFactory from 'react-bootstrap-table2-editor';
-import { SketchPicker } from 'react-color';
-import {
-  Button, InputGroup, InputGroupAddon, Input,
-} from 'reactstrap';
-
-const cellFormatter = (cell, row) => {
-    return (
-      <div style={{ background:`${cell}`, padding: '10px'}}>
-        { cell }
-      </div>
-    );
-  }
-
-const styleFactory = (cellValue, cell, row) => {
-  return {
-    padding: '0'
-  };
-};
 
 const columns = [{
   dataField: 'col1',
   text: 'Column 1',
-  style: styleFactory,
-  formatter: cellFormatter
+  
 }, {
-  dataField: 'col2',
+  dataField: 'col1',
   text: 'Column 2',
-  style: styleFactory,
-  formatter: cellFormatter
+  
 }, {
   dataField: 'col3',
   text: 'Column 3',
-  style: styleFactory,
-  formatter: cellFormatter
+ 
 }, {
   dataField: 'col4',
   text: 'Column 4',
-  style: styleFactory,
-  formatter: cellFormatter
+  
 }];
 
 const products = [{
@@ -76,13 +54,9 @@ const App = () => (
         keyField="id"
         data={products}
         columns={columns}
-        striped
         hover
         classes="foo"
-        cellEdit={cellEditFactory({
-          mode: 'click',
-          autoSelectText: true
-        })}
+        cellEdit={ cellEditFactory({ mode: 'click' }) }
       />
       
     </header>
