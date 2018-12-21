@@ -27,12 +27,31 @@
   padding: 0 10px;
   height: 50px;
   font-size: 25px;
+  border: 1px solid white;
 }
 
 .bich-table > tr > th {
   padding: 0 10px;
+  border: 1px solid white;
 }
 
+.bich-table > tr > td:hover, .bich-table > tr > th:hover{
+  background: #61dafb47;
+}
+
+.calculateResult {
+  position: absolute !important;
+  top: 30px;
+  right: 30px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 25px;
+  display: flex;
+  background-color: #61dafbfc !important;
+  color: black !important;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 @keyframes App-logo-spin {
   from {
