@@ -5,6 +5,7 @@
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  margin-bottom: 100px;
 }
 
 .App-header {
@@ -21,6 +22,17 @@
 .App-link {
   color: #61dafb;
 }
+
+.bich-table > tr > td {
+  padding: 0 10px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.bich-table > tr > th {
+  padding: 0 10px;
+}
+
 
 @keyframes App-logo-spin {
   from {
